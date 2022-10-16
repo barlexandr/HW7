@@ -1,6 +1,31 @@
 package ru.otus.assertions;
 
 public class Assertions {
+
+    public static void assertStringNotNumeric(String expected) {
+        if (expected.matches("[\\d]+")) {
+            throw new AssertionError(String.format("This is a not valid name \"%s\"", expected));
+        }
+    }
+
+    public static void assertNotNull(String expected) {
+        if (expected == null) {
+            throw new AssertionError("This value is null");
+        }
+    }
+
+    public static void assertLess(int expected, int actual) {
+        if (actual > expected) {
+            throw new AssertionError(String.format("Expected %d = %d", expected, actual));
+        }
+    }
+
+    public static void assertMore(int expected, int actual) {
+        if (actual < expected) {
+            throw new AssertionError(String.format("Expected %d = %d", expected, actual));
+        }
+    }
+
     public static void assertEquals(int expected, int actual) {
         if (expected != actual) {
             throw new AssertionError(String.format("Expected %d = %d", expected, actual));

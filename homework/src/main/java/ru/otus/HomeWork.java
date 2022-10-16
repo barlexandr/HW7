@@ -1,6 +1,11 @@
 package ru.otus;
 
 
+import ru.otus.tests.unit.DiceImplTest01;
+import ru.otus.tests.unit.DiceImplTest02;
+import ru.otus.tests.unit.GameTest01;
+import ru.otus.tests.unit.GameTest02;
+
 public class HomeWork {
 
     /*
@@ -15,6 +20,19 @@ public class HomeWork {
      */
     public static void main(String[] args) {
 
+        System.out.println("\n\n----------------------\n\n");
+
+        new DiceImplTest01().testDiceImplForNegativeNumber();
+        System.out.println("\n\n----------------------\n\n");
+
+        new DiceImplTest02().testDiceImplForGreaterThanNumber();
+        System.out.println("\n\n----------------------\n\n");
+
+        new GameTest01().testGameForCorrectPlayerName();
+        System.out.println("\n\n----------------------\n\n");
+
+        new GameTest02().testGameForNotNullPlayerName();
+        System.out.println("\n\n----------------------\n\n");
     }
     
 }
