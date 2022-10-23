@@ -1,6 +1,41 @@
 package ru.otus.assertions;
 
+import ru.otus.game.Player;
+
+import java.text.MessageFormat;
+
 public class Assertions {
+
+    public static void assertEquals(Player expected, Player actual) {
+        if (expected != actual) {
+            throw new AssertionError(MessageFormat.format("Expected {0} = {1}", expected, actual));
+        }
+    }
+
+    public static void assertStringNotNumeric(String expected) {
+        if (expected.matches("[\\d]+")) {
+            throw new AssertionError(String.format("This is a not valid name \"%s\"", expected));
+        }
+    }
+
+    public static void assertNotNull(String expected) {
+        if (expected == null) {
+            throw new AssertionError("This value is null");
+        }
+    }
+
+    public static void assertLess(int expected, int actual) {
+        if (actual > expected) {
+            throw new AssertionError(String.format("Expected %d = %d", expected, actual));
+        }
+    }
+
+    public static void assertMore(int expected, int actual) {
+        if (actual < expected) {
+            throw new AssertionError(String.format("Expected %d = %d", expected, actual));
+        }
+    }
+
     public static void assertEquals(int expected, int actual) {
         if (expected != actual) {
             throw new AssertionError(String.format("Expected %d = %d", expected, actual));

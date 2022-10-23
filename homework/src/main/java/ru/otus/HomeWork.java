@@ -1,6 +1,8 @@
 package ru.otus;
 
 
+import ru.otus.tests.unit.*;
+
 public class HomeWork {
 
     /*
@@ -15,6 +17,28 @@ public class HomeWork {
      */
     public static void main(String[] args) {
 
+        System.out.println("\n\n----------------------\n\n");
+
+        new DiceImplTest01().testDiceImplForNegativeNumber();
+        System.out.println("\n\n----------------------\n\n");
+
+        new DiceImplTest02().testDiceImplForGreaterThanNumber();
+        System.out.println("\n\n----------------------\n\n");
+
+        new GameTest01().testGameForCorrectPlayerName();
+        System.out.println("\n\n----------------------\n\n");
+
+        new GameTest02().testGameForNotNullPlayerName();
+        System.out.println("\n\n----------------------\n\n");
+
+        new GameTest03().testGameForPrintWinner();
+        System.out.println("\n\n----------------------\n\n");
+
+        new GameTest04().testGameForWinner();
+        System.out.println("\n\n----------------------\n\n");
+
+        new GameTest05().testGameForWinner();
+        System.out.println("\n\n----------------------\n\n");
     }
     
 }
