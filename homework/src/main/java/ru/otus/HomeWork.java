@@ -1,10 +1,7 @@
 package ru.otus;
 
 
-import ru.otus.tests.unit.DiceImplTest01;
-import ru.otus.tests.unit.DiceImplTest02;
-import ru.otus.tests.unit.GameTest01;
-import ru.otus.tests.unit.GameTest02;
+import ru.otus.tests.unit.*;
 
 public class HomeWork {
 
@@ -32,6 +29,12 @@ public class HomeWork {
         System.out.println("\n\n----------------------\n\n");
 
         new GameTest02().testGameForNotNullPlayerName();
+        System.out.println("\n\n----------------------\n\n");
+
+        new GameTest03().testGameForPrintWinner();
+        System.out.println("\n\n----------------------\n\n");
+
+        new GameTest04().testGameForWinner();
         System.out.println("\n\n----------------------\n\n");
     }
     
