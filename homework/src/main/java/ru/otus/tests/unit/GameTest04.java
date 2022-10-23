@@ -4,6 +4,7 @@ import ru.otus.assertions.Assertions;
 import ru.otus.game.Game;
 import ru.otus.game.GameWinnerConsolePrinter;
 import ru.otus.game.Player;
+import ru.otus.tests.unit.utils.MyMockDiceImplRealisationForTest;
 
 import java.io.ByteArrayOutputStream;
 import java.io.FileDescriptor;

@@ -1,4 +1,4 @@
-package ru.otus.tests.unit;
+package ru.otus.tests.unit.utils;
 
 import ru.otus.game.Dice;
 

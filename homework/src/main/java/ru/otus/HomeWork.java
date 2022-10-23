@@ -36,6 +36,9 @@ public class HomeWork {
 
         new GameTest04().testGameForWinner();
         System.out.println("\n\n----------------------\n\n");
+
+        new GameTest05().testGameForWinner();
+        System.out.println("\n\n----------------------\n\n");
     }
     
 }

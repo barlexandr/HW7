@@ -1,6 +1,16 @@
 package ru.otus.assertions;
 
+import ru.otus.game.Player;
+
+import java.text.MessageFormat;
+
 public class Assertions {
+
+    public static void assertEquals(Player expected, Player actual) {
+        if (expected != actual) {
+            throw new AssertionError(MessageFormat.format("Expected {0} = {1}", expected, actual));
+        }
+    }
 
     public static void assertStringNotNumeric(String expected) {
         if (expected.matches("[\\d]+")) {
